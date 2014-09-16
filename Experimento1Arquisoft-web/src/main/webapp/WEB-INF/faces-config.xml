@@ -5,7 +5,14 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     
               xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">        
     
-    <!-- Managed beans del sistema -->    
+    <!-- Managed beans del sistema -->  
+    <managed-bean>        
+        <description>Managed bean encargado de la autenticación de los usuarios en el sistema</description>        
+        <managed-bean-name>facebookSessionBean</managed-bean-name>        
+        <managed-bean-class>com.FourDots.beans.FacebookSessionBean</managed-bean-class>        
+        <managed-bean-scope>request</managed-bean-scope>    
+    </managed-bean>
+        
     <managed-bean>        
         <description>Managed bean encargado de la autenticación de los usuarios en el sistema</description>        
         <managed-bean-name>loginBean</managed-bean-name>        
