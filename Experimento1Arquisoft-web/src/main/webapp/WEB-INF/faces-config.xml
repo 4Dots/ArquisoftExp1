@@ -5,31 +5,20 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     
               xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">        
     
-    <!-- Managed beans del sistema -->  
-    <managed-bean>        
-        <description>Managed bean encargado de la autenticación de los usuarios en el sistema</description>        
-        <managed-bean-name>facebookSessionBean</managed-bean-name>        
-        <managed-bean-class>com.FourDots.beans.FacebookSessionBean</managed-bean-class>        
-        <managed-bean-scope>request</managed-bean-scope>    
+    <!-- Managed beans -->  
+
+    <managed-bean>
+        <description>Manages the Facebook Session</description>
+        <managed-bean-name>facebookSessionBean</managed-bean-name>
+        <managed-bean-class>com.FourDots.beans.FacebookSessionBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
-        
-    <managed-bean>        
-        <description>Managed bean encargado de la autenticación de los usuarios en el sistema</description>        
-        <managed-bean-name>loginBean</managed-bean-name>        
-        <managed-bean-class>com.losalpes.beans.LoginBean</managed-bean-class>        
-        <managed-bean-scope>request</managed-bean-scope>    
-    </managed-bean>
-    <managed-bean>        
-        <description>Managed bean que se encarga del catálogo en el sistema</description>        
-        <managed-bean-name>catalogoBean</managed-bean-name>        
-        <managed-bean-class>com.losalpes.beans.CatalogoBean</managed-bean-class>        
-        <managed-bean-scope>session</managed-bean-scope>    
-    </managed-bean>        
-    <managed-bean>        
-        <description>Managed bean encargado del navbar</description>        
-        <managed-bean-name>navBarBean</managed-bean-name>        
-        <managed-bean-class>com.losalpes.beans.NavBarBean</managed-bean-class>        
-        <managed-bean-scope>session</managed-bean-scope>    
+    
+        <managed-bean>
+        <description>Manages the Login</description>
+        <managed-bean-name>loginBean</managed-bean-name>
+        <managed-bean-class>com.FourDots.beans.LoginBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
 
     <!-- Reglas de navegación -->    
@@ -37,42 +26,7 @@
         <from-view-id>/index.xhtml</from-view-id>        
         <navigation-case>            
             <from-outcome>administrador</from-outcome>            
-            <to-view-id>/catalogo.jsf</to-view-id>        
+            <to-view-id>/index.xhtml</to-view-id>        
         </navigation-case>    
-    </navigation-rule>
-    <navigation-rule>        
-        <from-view-id>/index.xhtml</from-view-id>        
-        <navigation-case>            
-            <from-outcome>login</from-outcome>            
-            <to-view-id>/index.jsf</to-view-id>        
-        </navigation-case>    
-    </navigation-rule>        
-    <navigation-rule>        
-        <from-view-id>/catalogo.xhtml</from-view-id>        
-        <navigation-case>            
-            <from-outcome>catalogo</from-outcome>            
-            <to-view-id>/catalogo.jsf</to-view-id>        
-        </navigation-case>        
-        <navigation-case>            
-            <from-outcome>clientes</from-outcome>            
-            <to-view-id>/clientes.jsf</to-view-id>        
-        </navigation-case>    
-    </navigation-rule>        
-    <navigation-rule>        
-        <from-view-id>/clientes.xhtml</from-view-id>        
-        <navigation-case>            
-            <from-outcome>catalogo</from-outcome>            
-            <to-view-id>/catalogo.jsf</to-view-id>        
-        </navigation-case>        
-        <navigation-case>            
-            <from-outcome>clientes</from-outcome>            
-            <to-view-id>/clientes.jsf</to-view-id>        
-        </navigation-case>    
-    </navigation-rule>
-    <managed-bean>
-        <description>Manages the Facebook Session</description>
-        <managed-bean-name>facebookSessionBean</managed-bean-name>
-        <managed-bean-class>com.FourDots.beans.FacebookSessionBean</managed-bean-class>
-        <managed-bean-scope>request</managed-bean-scope>
-    </managed-bean>
+    </navigation-rule>       
 </faces-config>
