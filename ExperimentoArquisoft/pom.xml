@@ -61,6 +61,10 @@
             <artifactId>spring-social-facebook</artifactId>
             <version>1.1.1.RELEASE</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.facebook4j</groupId>
+            <artifactId>facebook4j-core</artifactId>
+            <version>2.1.0</version>
+        </dependency>
     </dependencies>
 </project>
